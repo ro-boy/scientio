@@ -14,11 +14,7 @@ env:
 before_install:
   - docker pull neo4j
   - docker events&
-  - docker run \
-    --publish=7474:7474 --publish=7687:7687 \
-    --volume=${HOME}/neo4j/data:/data \
-    --volume=${HOME}/neo4j/logs:/logs \
-    neo4j:3.0
+  - docker run --publish=7474:7474 --publish=7687:7687 --volume=${HOME}/neo4j/data:/data --volume=${HOME}/neo4j/logs:/logs neo4j:3.0
   - docker ps -a
   - curl -vX POST http://neo4j:neo4j@localhost:7474/user/neo4j/password -d"password=neo42j"
 
