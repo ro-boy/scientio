@@ -12,7 +12,7 @@ env:
   - NEO4J_ADDRESS="localhost:7474" NEO4J_USERNAME="neo4j" NEO4J_PASSWORD="neo42j"
 
 before_install:
-  - docker pull neo4j/neo4j
+  - docker pull neo4j
   - docker run \
     --publish=7474:7474 --publish=7687:7687 \
     --volume=$HOME/neo4j/data:/data \
