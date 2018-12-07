@@ -1,7 +1,7 @@
-import pytest
-import os
-from scientio import Session
-from scientio.ontology import Ontology, Node
+import pytest, os
+from src.scientio.session import Session
+from src.scientio.ontology.node import Node
+from src.scientio.ontology.ontology import Ontology
 
 
 def test_init():
