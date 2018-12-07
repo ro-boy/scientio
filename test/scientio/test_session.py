@@ -13,7 +13,7 @@ def test_init():
     address = os.environ['NEO4J_ADDRESS']
     user = os.environ['NEO4J_USERNAME']
     passw = os.environ['NEO4J_PASSWORD']
-    ontpath = "src/examples/example_ontology.yml"
+    ontpath = "src/scientio/examples/example_ontology.yml"
 
     o = Ontology(path_to_yaml=ontpath)
     s = Session(ontology=o, neo4j_address=address,
