@@ -1,5 +1,4 @@
 language: python
-sudo: required
 
 matrix:
   include:
@@ -9,11 +8,17 @@ matrix:
 
 cache: pip
 
-services:
-  - neo4j
-
 env:
-  - NEO4J_ADDRESS="localhost:7474" NEO4J_USERNAME="neo4j" NEO4J_PASSWORD="neo4j"
+  - NEO4J_ADDRESS="localhost:7474" NEO4J_USERNAME="neo4j" NEO4J_PASSWORD="neo4j" NEO4J_URL="http://localhost:7474"
+
+jdk:
+  - oraclejdk8
+
+before_install:
+  - wget dist.neo4j.org/neo4j-community-2.3.2-unix.tar.gz
+  - tar -xzf neo4j-community-2.3.2-unix.tar.gz
+  - neo4j-community-2.3.2/bin/neo4j start
+
 
 install:
   - pip install -r requirements.txt
