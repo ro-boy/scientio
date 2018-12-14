@@ -12,7 +12,7 @@ env:
   - NEO4J_ADDRESS="localhost:7474" NEO4J_USERNAME="neo4j" NEO4J_PASSWORD="neo4j" NEO4J_URL="http://localhost:7474"
 
 jdk:
-  - oraclejdk7
+  - openjdk11
 
 before_install:
   - wget dist.neo4j.org/neo4j-community-2.3.2-unix.tar.gz
