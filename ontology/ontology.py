@@ -3,7 +3,7 @@ from typing import FrozenSet, Optional
 import copy
 import yaml
 
-from scientio.ontology.otype import OType
+from ontology.otype import OType
 
 
 class Ontology(object):
