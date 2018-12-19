@@ -18,8 +18,8 @@ before_install:
   - wget dist.neo4j.org/neo4j-community-3.5.0-unix.tar.gz
   - tar -xzf neo4j-community-3.5.0-unix.tar.gz
   - echo "dbms.connector.bolt.address=0.0.0.0:7687" >> neo4j-community-3.5.0/conf/neo4j.conf
+  - sudo neo4j-community-3.5.0/bin/neo4j-admin set-initial-password neo42j
   - sudo neo4j-community-3.5.0/bin/neo4j start
-  - curl -vX POST http://neo4j:neo4j@localhost:7474/user/neo4j/password -d"password=neo42j"
 
 install:
   - pip install -r requirements.txt
