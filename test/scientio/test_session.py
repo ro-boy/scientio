@@ -22,7 +22,8 @@ class Test(unittest.TestCase):
                     neo4j_username=user, neo4j_password=passw)
 
         # TODO add dummy values
-        n = Node()
+        n = Node(metatype=o.get_type('Person'))
+        n.set_name('Test')
         n_response = s.create(n)
 
         assert (n_response is not None)
